@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    (C) Copyright 2019 Netcentric, a Cognizant Digital Business.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Image Design Dialog"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Image"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items
+                    jcr:primaryType="nt:unstructured"
+                    sling:hideChildren="[styletab]">
+                    <properties jcr:primaryType="nt:unstructured">
+                        <items jcr:primaryType="nt:unstructured">
+                            <content jcr:primaryType="nt:unstructured">
+                                <items
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:hideChildren="[enableLazyLoading,decorative,displayCaptionPopup]">
+                                </items>
+                            </content>
+                        </items>
+                    </properties>
+                    <style
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Style"
+                        sling:resourceType="granite/ui/components/coral/foundation/accordion"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <component
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Component Specifics"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <align
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        emptyText="Center"
+                                        fieldLabel="Alignment"
+                                        name="./mjmlAlign">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <center
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Center"
+                                                value="center"/>
+                                            <left
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Left"
+                                                value="left"/>
+                                            <right
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Right"
+                                                value="right"/>
+                                        </items>
+                                    </align>
+                                    <width
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText="100%"
+                                        fieldDescription="A number in either pixels or percentage: for example 100px or 33%"
+                                        fieldLabel="Width"
+                                        name="./mjmlWidth"/>
+                                    <height
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText="auto"
+                                        fieldDescription="Image height in pixels"
+                                        fieldLabel="Height"
+                                        name="./mjmlHeight"/>
+                                    <containerBackgroundColor
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="In hex format: #FFFFFF for example"
+                                        fieldLabel="Container Background Color"
+                                        name="./mjmlContainerBackgroundColor"/>
+                                    <fluidOnMobile
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/checkbox"
+                                        name="./mjmlFluidOnMobile"
+                                        text="Fluid on Mobile"
+                                        value="true"/>
+                                </items>
+                            </component>
+                            <border
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Border"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <border
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText="none"
+                                        fieldLabel="Border"
+                                        name="./mjmlBorder"/>
+                                    <borderRadius
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText=""
+                                        fieldLabel="Border Radius"
+                                        name="./mjmlBorderRadius"/>
+                                </items>
+                            </border>
+                            <padding
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Padding"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <padding
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText="20px 0"
+                                        fieldDescription="Up to for numeric widths in pixels (css format): for example 20px 20px 10px 10px"
+                                        fieldLabel="Padding"
+                                        name="./mjmlPadding"/>
+                                    <paddingBottom
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText=""
+                                        fieldDescription="A numeric widths in pixels: for example 20px"
+                                        fieldLabel="Padding Bottom"
+                                        name="./mjmlPaddingBottom"/>
+                                    <paddingLeft
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText=""
+                                        fieldDescription="A numeric widths in pixels: for example 20px"
+                                        fieldLabel="Padding Left"
+                                        name="./mjmlPaddingLeft"/>
+                                    <paddingRight
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText=""
+                                        fieldDescription="A numeric widths in pixels: for example 20px"
+                                        fieldLabel="Padding Right"
+                                        name="./mjmlPaddingRight"/>
+                                    <paddingTop
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText=""
+                                        fieldDescription="A numeric widths in pixels: for example 20px"
+                                        fieldLabel="Padding Top"
+                                        name="./mjmlPaddingTop"/>
+                                </items>
+                            </padding>
+                        </items>
+                    </style>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

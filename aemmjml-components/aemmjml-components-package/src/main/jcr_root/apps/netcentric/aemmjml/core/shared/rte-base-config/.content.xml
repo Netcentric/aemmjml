@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    (C) Copyright 2019 Netcentric, a Cognizant Digital Business.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:primaryType="nt:unstructured"
+    sling:resourceType="cq/gui/components/authoring/dialog/richtext">
+    <rtePlugins jcr:primaryType="nt:unstructured">
+        <edit
+            jcr:primaryType="nt:unstructured"
+            features="cut,copy,paste-default"/>
+        <format
+            jcr:primaryType="nt:unstructured"
+            features="bold,italic"/>
+        <links
+            jcr:primaryType="nt:unstructured"
+            features="modifylink,unlink"/>
+        <lists
+            jcr:primaryType="nt:unstructured"
+            features="*"/>
+        <paraformat
+            jcr:primaryType="nt:unstructured"
+            features="*">
+            <formats jcr:primaryType="nt:unstructured">
+                <p
+                    jcr:primaryType="nt:unstructured"
+                    description="Paragraph"
+                    tag="p"/>
+                <h1
+                    jcr:primaryType="nt:unstructured"
+                    description="Heading 1"
+                    tag="h1"/>
+                <h2
+                    jcr:primaryType="nt:unstructured"
+                    description="Heading 2"
+                    tag="h2"/>
+                <h3
+                    jcr:primaryType="nt:unstructured"
+                    description="Heading 3"
+                    tag="h3"/>
+                <h4
+                    jcr:primaryType="nt:unstructured"
+                    description="Heading 4"
+                    tag="h4"/>
+                <h5
+                    jcr:primaryType="nt:unstructured"
+                    description="Heading 5"
+                    tag="h5"/>
+                <h6
+                    jcr:primaryType="nt:unstructured"
+                    description="Heading 6"
+                    tag="h6"/>
+                <blockquote
+                    jcr:primaryType="nt:unstructured"
+                    description="Quote"
+                    tag="blockquote"/>
+                <pre
+                    jcr:primaryType="nt:unstructured"
+                    description="Preformatted"
+                    tag="pre"/>
+            </formats>
+        </paraformat>
+        <personalizationplugin
+            jcr:primaryType="nt:unstructured"
+            features="*"/>
+        <tracklinks
+            jcr:primaryType="nt:unstructured"
+            features="*"/>
+    </rtePlugins>
+    <uiSettings jcr:primaryType="nt:unstructured">
+        <cui jcr:primaryType="nt:unstructured">
+            <inline
+                jcr:primaryType="nt:unstructured"
+                toolbar="[format#bold,format#italic,format#underline,#justify,#lists,links#modifylink,links#unlink,#paraformat,personalizationplugin#insertvariable]">
+                <popovers jcr:primaryType="nt:unstructured">
+                    <lists
+                        jcr:primaryType="nt:unstructured"
+                        items="[lists#unordered,lists#ordered,lists#outdent,lists#indent]"
+                        ref="lists"/>
+                    <paraformat
+                        jcr:primaryType="nt:unstructured"
+                        items="paraformat:getFormats:paraformat-pulldown"
+                        ref="paraformat"/>
+                </popovers>
+            </inline>
+            <dialogFullScreen
+                jcr:primaryType="nt:unstructured"
+                toolbar="[format#bold,format#italic,format#underline,lists#unordered,lists#ordered,lists#outdent,lists#indent,links#modifylink,links#unlink,table#createoredit,#paraformat,image#imageProps,personalizationplugin#insertvariable]">
+                <popovers jcr:primaryType="nt:unstructured">
+                    <paraformat
+                        jcr:primaryType="nt:unstructured"
+                        items="paraformat:getFormats:paraformat-pulldown"
+                        ref="paraformat"/>
+                </popovers>
+            </dialogFullScreen>
+        </cui>
+    </uiSettings>
+</jcr:root>

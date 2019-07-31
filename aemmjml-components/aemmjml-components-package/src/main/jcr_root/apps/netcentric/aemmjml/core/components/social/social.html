@@ -1,0 +1,29 @@
+<!--/*
+ * (C) Copyright 2019 Netcentric, a Cognizant Digital Business.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */-->
+<sly data-sly-use.component="biz.netcentric.cq.tools.aemmjml.components.MjmlSocial"
+     data-sly-use.templates="/apps/core/wcm/components/commons/v1/templates.html">
+    <mj-social data-sly-test.notEmpty="${!component.elements.empty}"
+               data-sly-attribute="${component.attributes}">
+        <mj-social-element data-sly-repeat.element="${component.elements}"
+                           data-sly-attribute="${element.attributes}">
+            ${element.label}
+        </mj-social-element>
+    </mj-social>
+    <mj-text data-sly-test="${!notEmpty}">
+        <sly data-sly-call="${templates.placeholder @ isEmpty = !notEmpty}">
+        </sly>
+    </mj-text>
+</sly>

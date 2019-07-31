@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    (C) Copyright 2019 Netcentric, a Cognizant Digital Business.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Divider Design Dialog"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Divider"
+    sling:resourceType="cq/gui/components/authoring/dialog">
+    <content
+        jcr:primaryType="nt:unstructured"
+        sling:resourceType="granite/ui/components/coral/foundation/container">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="granite/ui/components/coral/foundation/tabs"
+                maximized="{Boolean}true">
+                <items jcr:primaryType="nt:unstructured">
+                    <style
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Style"
+                        sling:resourceType="granite/ui/components/coral/foundation/accordion"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <component
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Component Specifics"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <width
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldLabel="Width"
+                                        name="./mjmlWidth"/>
+                                    <containerBackgroundColor
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        fieldDescription="In hex format: #FFFFFF for example"
+                                        fieldLabel="Container Background Color"
+                                        name="./mjmlContainerBackgroundColor"/>
+                                </items>
+                            </component>
+                            <border
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Border"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <borderColor
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText="none"
+                                        fieldLabel="Border Color"
+                                        name="./mjmlBorderColor"/>
+                                    <borderStyle
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        emptyText="Top"
+                                        fieldLabel="Border Style"
+                                        name="./mjmlBorderStyle">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <solid
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Solid"
+                                                value="solid"/>
+                                            <dashed
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Dashed"
+                                                value="dashed"/>
+                                            <dotted
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Dotted"
+                                                value="dotted"/>
+                                        </items>
+                                    </borderStyle>
+                                    <borderWidth
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText="4px"
+                                        fieldLabel="Border Width"
+                                        name="./mjmlBorderWidth"/>
+                                </items>
+                            </border>
+                            <padding
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Padding"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <padding
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText="0px"
+                                        fieldLabel="Padding"
+                                        name="./mjmlPadding"/>
+                                    <paddingBottom
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText=""
+                                        fieldLabel="Padding Bottom"
+                                        name="./mjmlPaddingBottom"/>
+                                    <paddingLeft
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText=""
+                                        fieldLabel="Padding Left"
+                                        name="./mjmlPaddingLeft"/>
+                                    <paddingRight
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText=""
+                                        fieldLabel="Padding Right"
+                                        name="./mjmlPaddingRight"/>
+                                    <paddingTop
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText=""
+                                        fieldLabel="Padding Top"
+                                        name="./mjmlPaddingTop"/>
+                                </items>
+                            </padding>
+                        </items>
+                    </style>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

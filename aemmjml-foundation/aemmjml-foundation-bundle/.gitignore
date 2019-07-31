@@ -1,0 +1,3 @@
+src/main/js/node/
+src/main/js/node_modules/
+src/main/antlr4/**/*.tokens

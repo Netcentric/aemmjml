@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    (C) Copyright 2019 Netcentric, a Cognizant Digital Business.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Group Design Dialog"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Group"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="https://mjml.io/documentation/?html#mjml-section">
+    <content jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs jcr:primaryType="nt:unstructured">
+                <items jcr:primaryType="nt:unstructured">
+                    <style
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Style"
+                        sling:resourceType="granite/ui/components/coral/foundation/accordion"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <component
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Component Specifics"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <width
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText="100 / # of columns in section"
+                                        fieldLabel="Width"
+                                        name="./mjmlWidth"/>
+                                    <verticalAlgin
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        emptyText="Top"
+                                        fieldLabel="Vertical Alignment"
+                                        name="./mjmlVerticalAlign">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <top
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Top"
+                                                value="top"/>
+                                            <middle
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Middle"
+                                                value="middle"/>
+                                            <bottom
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Bottom"
+                                                value="bottom"/>
+                                        </items>
+                                    </verticalAlgin>
+                                </items>
+                            </component>
+                            <background
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Background"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <backgroundColor
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText="none"
+                                        fieldLabel="Background Color"
+                                        name="./mjmlBackgroundColor"/>
+                                </items>
+                            </background>
+                        </items>
+                    </style>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

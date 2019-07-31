@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    (C) Copyright 2019 Netcentric, a Cognizant Digital Business.
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0"
+    jcr:description="Hero Design Dialog"
+    jcr:primaryType="nt:unstructured"
+    jcr:title="Hero"
+    sling:resourceType="cq/gui/components/authoring/dialog"
+    helpPath="https://mjml.io/documentation/?html#mjml-section">
+    <content jcr:primaryType="nt:unstructured">
+        <items jcr:primaryType="nt:unstructured">
+            <tabs jcr:primaryType="nt:unstructured">
+                <items jcr:primaryType="nt:unstructured">
+                    <style
+                        jcr:primaryType="nt:unstructured"
+                        jcr:title="Style"
+                        sling:resourceType="granite/ui/components/coral/foundation/accordion"
+                        margin="{Boolean}true">
+                        <items jcr:primaryType="nt:unstructured">
+                            <component
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Component Specifics"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <mode
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        emptyText="Fluid Height"
+                                        fieldLabel="Mode"
+                                        name="./mjmlMode">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <fluid-height
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Fluid Height"
+                                                value="fluid-height"/>
+                                            <fixed-height
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Fixed Height"
+                                                value="fixed-height"/>
+                                        </items>
+                                    </mode>
+                                    <width
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText="parent element width"
+                                        fieldLabel="Width"
+                                        name="./mjmlWidth"/>
+                                    <height
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText="0px"
+                                        fieldLabel="Height"
+                                        name="./mjmlHeight"/>
+                                    <verticalAlgin
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        emptyText="Top"
+                                        fieldLabel="Vertical Alignment"
+                                        name="./mjmlVerticalAlign">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <top
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Top"
+                                                value="top"/>
+                                            <middle
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Middle"
+                                                value="middle"/>
+                                            <bottom
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Bottom"
+                                                value="bottom"/>
+                                        </items>
+                                    </verticalAlgin>
+                                </items>
+                            </component>
+                            <background
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Background"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <backgroundColor
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText="none"
+                                        fieldLabel="Background Color"
+                                        name="./mjmlBackgroundColor"/>
+                                    <backgroundUrl
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/pathfield"
+                                        emptyText="none"
+                                        fieldLabel="Background Url"
+                                        multiple="{Boolean}false"
+                                        name="./mjmlBackgroundUrl"
+                                        rootPath="/content/dam"/>
+                                    <backgroundWidth
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText="0px"
+                                        fieldLabel="Background Width"
+                                        name="./mjmlBackgroundWidth"/>
+                                    <backgroundHeight
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText="0px"
+                                        fieldLabel="Background Height"
+                                        name="./mjmlBackgroundHeight"/>
+                                    <backgroundPosition
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/select"
+                                        emptyText="Center"
+                                        fieldLabel="Background Position"
+                                        name="./mjmlBackgroundPosition">
+                                        <items jcr:primaryType="nt:unstructured">
+                                            <center
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Center"
+                                                value="center center"/>
+                                            <centerLeft
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Center-Left"
+                                                value="center left"/>
+                                            <centerLeft
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Center-Right"
+                                                value="center right"/>
+                                            <topCenter
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Top-Center"
+                                                value="top center"/>
+                                            <topLeft
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Top-Left"
+                                                value="top left"/>
+                                            <topRight
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Top-Right"
+                                                value="top right"/>
+                                            <bottomCenter
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Bottom-Center"
+                                                value="bottom center"/>
+                                            <bottomLeft
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Bottom-Left"
+                                                value="bottom left"/>
+                                            <bottomRight
+                                                jcr:primaryType="nt:unstructured"
+                                                text="Bottom-Right"
+                                                value="bottom right"/>
+                                        </items>
+                                    </backgroundPosition>
+                                </items>
+                            </background>
+                            <padding
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="Padding"
+                                sling:resourceType="granite/ui/components/coral/foundation/container">
+                                <items jcr:primaryType="nt:unstructured">
+                                    <padding
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText="0px"
+                                        fieldLabel="Padding"
+                                        name="./mjmlPadding"/>
+                                    <paddingTop
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText=""
+                                        fieldLabel="Padding Top"
+                                        name="./mjmlPaddingTop"/>
+                                    <paddingRight
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText=""
+                                        fieldLabel="Padding Right"
+                                        name="./mjmlPaddingRight"/>
+                                    <paddingBottom
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText=""
+                                        fieldLabel="Padding Bottom"
+                                        name="./mjmlPaddingBottom"/>
+                                    <paddingLeft
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="granite/ui/components/coral/foundation/form/textfield"
+                                        emptyText=""
+                                        fieldLabel="Padding Left"
+                                        name="./mjmlPaddingLeft"/>
+                                </items>
+                            </padding>
+                        </items>
+                    </style>
+                </items>
+            </tabs>
+        </items>
+    </content>
+</jcr:root>

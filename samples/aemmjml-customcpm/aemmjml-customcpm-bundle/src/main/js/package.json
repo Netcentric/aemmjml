@@ -1,0 +1,15 @@
+{
+  "name": "mjml-custom",
+  "scripts": {
+    "build": "node_modules/webpack/bin/webpack.js"
+  },
+  "dependencies": {
+    "mjml": "4.4.0"
+  },
+  "devDependencies": {
+    "babel-loader": "^7.1.4",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "webpack": "4.4.1",
+    "webpack-cli": "2.0.13"
+  }
+}

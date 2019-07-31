@@ -1,0 +1,27 @@
+<mjml>
+    <mj-head>
+        <mj-raw>
+            <link rel="stylesheet" href="/etc.clientlibs/foundation/clientlibs/main.css" type="text/css">
+            <script type="text/javascript" src="/etc.clientlibs/foundation/clientlibs/main.js"></script>
+        </mj-raw>
+    </mj-head>
+    <mj-body>
+        <mj-section>
+            <mj-column>
+                <mj-image width="100px" src="/assets/img/logo-small.png"></mj-image>
+                <mj-divider border-color="#F45E43"></mj-divider>
+                <mj-text font-size="20px" color="#F45E43" font-family="helvetica">
+                    <p>
+                        Full World
+                    </p>
+                    <p>
+                        <a href="/foo/bar/more.html?campaignId=<%@ include view='campaignId'%>">=> Learn more</a>
+                    </p>
+                    <p>
+                        <%@ include view='mirrorPage' %>
+                    </p>
+                </mj-text>
+            </mj-column>
+        </mj-section>
+    </mj-body>
+</mjml>

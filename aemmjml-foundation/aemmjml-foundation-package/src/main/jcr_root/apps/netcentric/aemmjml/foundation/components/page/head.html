@@ -1,0 +1,51 @@
+<!--/*
+ * (C) Copyright 2019 Netcentric, a Cognizant Digital Business.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */-->
+<mj-head data-sly-use.page="biz.netcentric.cq.tools.aemmjml.MjmlPage"
+         data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html">
+    <mj-raw data-sly-test="${!wcmmode.disabled}">
+        <sly data-sly-call="${clientlib.all @ categories = [
+                'cq.authoring.page',
+                'cq.shared',
+                'cq.foundation-main',
+                'cq.wcm.foundation-main',
+                'wcm.foundation.components.parsys.allowedcomponents'
+            ]}">
+        </sly>
+    </mj-raw>
+
+    <mj-style data-sly-test="${!wcmmode.disabled}">
+        .mjml .cq-Editable-dom--container, .cq-Editable-dom--container.aem-GridColumn {
+        padding-top: 0;
+        padding-bottom: 0;
+        }
+    </mj-style>
+
+    <mj-style data-sly-test.clientlibCategories="${currentStyle['clientlibs']}"
+              data-sly-use.inlineClientlibs="${ 'biz.netcentric.cq.tools.aemmjml.helper.InlineStyles' @ categories = clientlibCategories}">
+        <sly data-sly-repeat.inlineClientlib="${inlineClientlibs.libraries}">
+            ${inlineClientlib}
+        </sly>
+    </mj-style>
+
+    <mj-raw data-sly-test="${!wcmmode.disabled}">
+        <meta id="campaignContextHub" data-register="true" data-metadata-method="POST">
+        <sly data-sly-resource="${'contexthub' @ resourceType='granite/contexthub/components/contexthub'}">
+        </sly>
+    </mj-raw>
+
+    <mj-title data-sly-test="${page.title}">${page.title}</mj-title>
+    <mj-preview data-sly-test="${page.preview}">${page.preview}</mj-preview>
+</mj-head>
