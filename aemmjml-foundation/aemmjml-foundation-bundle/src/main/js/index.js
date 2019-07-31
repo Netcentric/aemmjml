@@ -24,11 +24,6 @@ const mjmlOptions = {
     minify: true,
     minifyOptions: {
         trimCustomFragments: true,
-        ignoreCustomFragments: [
-            /< ./,
-            /<%[\s\S]*?%>/,
-            /<\?[\s\S]*?\?>/,
-        ]
     }
 }
 

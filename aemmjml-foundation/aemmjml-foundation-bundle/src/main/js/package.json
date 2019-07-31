@@ -7,7 +7,7 @@
     "build:test": "node_modules/webpack/bin/webpack.js --config webpack/test.config.js"
   },
   "dependencies": {
-    "mjml": "4.4.0"
+    "mjml": "4.4.1"
   },
   "devDependencies": {
     "babel-loader": "^7.1.4",
