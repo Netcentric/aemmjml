@@ -42,6 +42,12 @@
                         <embedded>
                             <groupId>biz.netcentric.cq.tools.aemmjml</groupId>
                         </embedded>
+                        <embedded>
+                            <!-- embedded as long as AEM ships < 1.18 out of the box -->
+                            <!-- mitigates CVE-2018-1324 and CVE-2018-11771 -->
+                            <groupId>org.apache.commons</groupId>
+                            <artifactId>commons-compress</artifactId>
+                        </embedded>
                     </embeddeds>
                     <dependencies>
                         <dependency>
@@ -60,6 +66,12 @@
     </build>
 
     <dependencies>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-compress</artifactId>
+            <scope>compile</scope>
+        </dependency>
+
         <dependency>
             <groupId>biz.netcentric.cq.tools.aemmjml</groupId>
             <artifactId>aemmjml-foundation-bundle</artifactId>

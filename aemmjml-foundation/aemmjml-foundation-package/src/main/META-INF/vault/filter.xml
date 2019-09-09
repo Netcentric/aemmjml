@@ -19,6 +19,7 @@
     <filter root="/apps/netcentric/config/rewriter/mjml"/>
     <filter root="/apps/netcentric/aemmjml/install">
         <include pattern="/apps/netcentric/aemmjml/install/aemmjml-foundation-.*" />
+        <include pattern="/apps/netcentric/aemmjml/install/commons-compress-1.18.jar" />
     </filter>
     <filter root="/apps/netcentric/aemmjml/authoring"/>
     <filter root="/apps/netcentric/aemmjml/foundation"/>
