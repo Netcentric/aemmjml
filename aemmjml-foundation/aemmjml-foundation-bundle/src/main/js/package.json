@@ -10,6 +10,7 @@
     "mjml": "4.5.1"
   },
   "devDependencies": {
+    "lodash": ">=4.17.15",
     "babel-loader": "^7.1.4",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
