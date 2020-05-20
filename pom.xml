@@ -20,7 +20,7 @@
     <groupId>biz.netcentric.cq.tools.aemmjml</groupId>
     <artifactId>aemmjml</artifactId>
     <packaging>pom</packaging>
-    <version>0.1.0</version>
+    <version>1.0.0-SNAPSHOT</version>
 
     <name>AEM MJML - Reactor Project</name>
     <description>Maven Multimodule project for AEM MJML.</description>
@@ -47,7 +47,7 @@
         <connection>scm:git:ssh://git@github.com/Netcentric/aemmjml.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/Netcentric/aemmjml.git</developerConnection>
         <url>https://github.com/Netcentric/aemmjml.git</url>
-        <tag>0.1.0</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <distributionManagement>
