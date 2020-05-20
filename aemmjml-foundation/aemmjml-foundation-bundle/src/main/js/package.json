@@ -7,10 +7,9 @@
     "build:test": "node_modules/webpack/bin/webpack.js --config webpack/test.config.js"
   },
   "dependencies": {
-    "mjml": "4.5.1"
+    "mjml": "^4.6.3"
   },
   "devDependencies": {
-    "lodash": ">=4.17.15",
     "babel-loader": "^7.1.4",
     "babel-plugin-add-module-exports": "^0.2.1",
     "babel-plugin-transform-async-to-generator": "^6.24.1",
@@ -20,8 +19,9 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-0": "^6.24.1",
     "license-webpack-plugin": "^2.1.1",
+    "lodash": ">=4.17.15",
     "shebang-loader": "0.0.1",
-    "webpack": "4.4.1",
+    "webpack": "^4.43.0",
     "webpack-cli": "2.0.13"
   }
 }

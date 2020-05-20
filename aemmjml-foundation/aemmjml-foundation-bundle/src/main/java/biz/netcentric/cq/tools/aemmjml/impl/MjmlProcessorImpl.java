@@ -87,9 +87,9 @@ public class MjmlProcessorImpl implements MjmlProcessor {
     }
 
     private enum NodejsPackage {
-        NODEJS_MACOSX("nodejs-binaries-12.5.0-darwin-x64.tar.gz", "node-v12.5.0-darwin-x64/bin/node"),
-        NODEJS_LINUX64("nodejs-binaries-12.5.0-linux-x64.tar.gz", "node-v12.5.0-linux-x64/bin/node"),
-        NODEJS_WIN64("nodejs-binaries-12.5.0-win-x64.zip", "node-v12.5.0-win-x64/node.exe"); // untested
+        NODEJS_MACOSX("nodejs-binaries-12.16.3-darwin-x64.tar.gz", "node-v12.16.3-darwin-x64/bin/node"),
+        NODEJS_LINUX64("nodejs-binaries-12.16.3-linux-x64.tar.gz", "node-v12.16.3-linux-x64/bin/node"),
+        NODEJS_WIN64("nodejs-binaries-12.16.3-win-x64.zip", "node-v12.16.3-win-x64/node.exe"); // untested
 
         private final String fileName;
         private final String executable;
@@ -321,8 +321,7 @@ public class MjmlProcessorImpl implements MjmlProcessor {
     }
 
     private static String getCustomComponentName(CustomComponentProvider provider) {
-        return StringUtils.replaceChars(provider.getClass().getName(), File.separatorChar, '_') + '@' + String.valueOf(provider.hashCode())
-                + ".cc.js";
+        return StringUtils.replaceChars(provider.getClass().getName(), File.separatorChar, '_') + '@' + provider.hashCode() + ".cc.js";
     }
 
     private class MjmlCall implements Callable<String> {

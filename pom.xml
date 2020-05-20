@@ -82,7 +82,7 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <slf4j.version>1.7.6</slf4j.version>
-        <nodejs.version>12.5.0</nodejs.version>
+        <nodejs.version>12.16.3</nodejs.version>
         <sonar.jacoco.reportPath>${project.basedir}/target/jacoco.exec</sonar.jacoco.reportPath>
     </properties>
 
@@ -345,7 +345,7 @@
                 <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
-                    <version>0.8.4</version>
+                    <version>0.8.5</version>
                     <configuration>
                         <destFile>${sonar.jacoco.reportPath}</destFile>
                         <append>true</append>
