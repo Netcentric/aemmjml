@@ -37,6 +37,7 @@ The `aemmjml-foundation` module implements the core of AEM MJML. It provides the
 Further Documentation
 ---------------------
 
+- [Build and Development](doc/build-and-development.md)
 - [Implementing custom mjml components](doc/custom-components.md)
 
 License
